@@ -1,7 +1,5 @@
 # Object-oriented programming course
 
-Folder contains solutions to assigments I was working on during second semester of CS studies. 
-
 ## BajtTrade
 
 The program simulates stock market depending on given JSON data.
