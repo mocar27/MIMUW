@@ -1,4 +1,6 @@
-# Matrices assigment
+# Matrices task
+
+## This is one of two bigger projects I was told to do as a part of Object Oriented Programming course.
 
 ## Running a project
 
