@@ -1,27 +1,20 @@
 # Matrices assigment
 
-# Reprezentacja macierzy
+## Running a project
 
-## Uruchamianie projektu
-
-Program może zostać skompilowany do pojedynczego pliku `jar` z wykorzystaniem polecenia
+The program can be compiled into a single file `jar` using the command
 ```shell
 ./gradlew shadowJar
 ```
-wynik budowania znajduje się wówczas w katalogu `build/libs` i można go uruchomić z konsoli poprzez polecenie
+the build result is then in the directory `build/libs` and it can be run from the console via a command
 ```shell
 java -jar build/libs/oop-2022-all.jar
 ```
-Zalecane jest jednak, na etapie tworzenia rozwiązania, korzystanie z konfiguracji przygotowywanych
-przez środowiska programistyczne, takie jak Intellij, które umożliwiają
-uruchomienie funkcji `main` z poziomu interfejsu użytkownika oraz łatwe debugowanie
-naszego programu.
+## Testing
 
-## Testowanie
-
-Testy z katalogu `src/test` mogą zostać uruchomione poleceniem
+Catalog tests `src/test` can be run by command
 ```shell
 ./gradlew test
 ```
-które powoduje uruchomienie wszystkich funkcji oznaczonych adnotacjami dostarczonymi
-przez JUnit, np. `@Test`.
+which runs all functions marked with the annotations provided
+by JUnit, e.g. `@Test`.
