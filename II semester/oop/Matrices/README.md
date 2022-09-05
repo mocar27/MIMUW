@@ -2,7 +2,7 @@
 
 ## Description
 
-This is one of two bigger projects I was told to do as a part of Object Oriented Programming course.
+This is one of two bigger projects I was told to do as a part of Object-oriented programming course.
 
 The program can perform matrix operations such as adding, subtraction, multiplying, division
 
