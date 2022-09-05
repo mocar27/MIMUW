@@ -6,7 +6,7 @@ This is one of two bigger projects I was told to do as a part of Object Oriented
 
 I am author of most of the project files. 
 
-Tests, `MatrixCellValue.java` class and `IDoubleMatrix.java` interface were provided by the authors of the task.
+Tests, `IDoubleMatrix.java` interface, `MatrixCellValue.java` and `Shape.java` classes and were provided by the authors of the task.
 
 ## Running a project
 
