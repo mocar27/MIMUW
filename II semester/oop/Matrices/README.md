@@ -4,6 +4,12 @@
 
 This is one of two bigger projects I was told to do as a part of Object Oriented Programming course.
 
+The program can perform matrix operations such as adding, subtraction, multiplying, division
+
+on many types of matrices, provided the given data is correct and matrices are right sizes,
+
+otherwise the program throws exception that given data is wrong.
+
 I am author of most of the project files. 
 
 Tests, `IDoubleMatrix.java` interface, `MatrixCellValue.java` and `Shape.java` classes were provided by the authors of the task.
