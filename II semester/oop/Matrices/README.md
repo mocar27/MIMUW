@@ -1,6 +1,9 @@
 # Matrices task
 
-## This is one of two bigger projects I was told to do as a part of Object Oriented Programming course.
+## Description
+
+This is one of two bigger projects I was told to do as a part of Object Oriented Programming course.
+I am co-author of the whole project files. Tests, 
 
 ## Running a project
 
