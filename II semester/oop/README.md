@@ -1,4 +1,4 @@
-# Object-oriented programming course
+# ***Object-oriented programming course***
 
 ## BajtTrade
 
