@@ -1,0 +1,3 @@
+C:/Users/mocar/CLionProjects/duzeZadanie/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/mocar/CLionProjects/duzeZadanie/cmake-build-debug/CMakeFiles/phone_forward.dir
+C:/Users/mocar/CLionProjects/duzeZadanie/cmake-build-debug/CMakeFiles/edit_cache.dir

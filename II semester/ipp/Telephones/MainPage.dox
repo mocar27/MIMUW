@@ -1,0 +1,19 @@
+/**
+@mainpage Documentation of the Telephones assigment
+
+### The content of the task
+
+Attention: the current content of the task can be found in [Moodle](https://moodle.mimuw.edu.pl).
+
+### Program description
+
+This year's big task is to implement operations on telephone numbers.
+
+We will interpret operations on telephone numbers as operations on a tree structure,
+which in each node stores pointers to up to twelve other digits,
+pointer to the string to which the given number is redirected (from the root of the redirect tree),
+the pointer to the beginning of the list with all telephone numbers, which in our tree
+redirect to a given number (from the root of the redirect tree)
+and a counter of how many there are numbers in our tree that redirect to a given number.
+
+*/
