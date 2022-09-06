@@ -6,4 +6,5 @@ The program performs various operations on phone numbers using Trie structure, s
 * Getting reverse redirections - getting all phones that are redirected to given number.
 * Removing and quickly, linearly, deleting whole Trie structure, depending on the number of nodes in the Trie.
 
-Project is organized, readable and easily modifiable. Whole documentation was made using the Doxygen software. 
+Project is organized, readable and easily modifiable. Whole documentation was made using the Doxygen software.
+Project operates on self written ***list*** library and self written ***string*** library. 
