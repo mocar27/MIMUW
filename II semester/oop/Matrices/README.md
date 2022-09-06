@@ -4,7 +4,7 @@
 
 This is one of two bigger projects I was told to do as a part of Object-oriented programming course.
 
-The program can perform matrix operations such as adding, subtraction, multiplying, division
+The program performs matrix operations such as adding, subtraction, multiplying, division
 
 on many types of matrices, provided the given data is correct and matrices are right sizes,
 
