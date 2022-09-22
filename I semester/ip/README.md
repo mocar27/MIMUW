@@ -1,4 +1,4 @@
-# ***Introduction to imperative programming***
+# ***Introductory programming***
 
 ## Polynomials (Wielomiany)
 
