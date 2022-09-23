@@ -2,7 +2,7 @@
 
 ## Labyrinth (Labirynt)
 
-The program looks for the shortest path in the labyrinth given the start and end position.
+The program looks for the shortest path in the k-dimensional maze given the start and end position.
 
 ## Telephones (Telefony)
 
