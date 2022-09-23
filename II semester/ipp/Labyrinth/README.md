@@ -13,5 +13,5 @@ If there are no problems with the data, the program ends either:
 
 * with a number, that is the shortest path from the start to the end point.
 * with a caption: ***"NO WAY"***, when the path from the start to the end point doesn't exist.
-* 
+
 Project operates on self written ***Bitset*** and ***Queue*** structures.
