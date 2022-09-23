@@ -1,6 +1,6 @@
 # "Labyrinth" task
 
-The program looks for the shortest path in the k-dimensional maze that is described as:
+The program looks for the shortest path in the ***k-dimensional*** maze that is described as:
 
 * The first line contains ***k*** numbers, where ***k*** is number of dimensions in maze.
 * The second line contains coordinates of the starting position.
