@@ -1,9 +1,9 @@
 #ifndef _PROLIB_H
 #define _PROLIB_H
 #define Uint unsigned int
-typedef struct Bitset Bitset; // added
+typedef struct Bitset Bitset;
 
-#include <stddef.h> // added
+#include <stddef.h>
 #include "iolib.h"
 #include "prolib.h"
 #include "strct.h"
