@@ -5,6 +5,7 @@
 #include "prolib.h"
 #include "strct.h"
 #include "lablib.h"
+
 struct node {
     size_t value; // value kept in struct
     struct node *next;  // pointer to another same-type structure
