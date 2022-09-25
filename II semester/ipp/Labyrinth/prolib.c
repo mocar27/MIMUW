@@ -4,6 +4,7 @@
 #include "prolib.h"
 #include "strct.h"
 #include "lablib.h"
+
 void checkDimension(size_t **tab1, size_t **tab2, size_t size1, size_t size2, bool *problem, int *line) {
     if (size1 != size2)
         printError(line, problem);
