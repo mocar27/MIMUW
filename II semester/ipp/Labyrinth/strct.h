@@ -1,6 +1,6 @@
 #ifndef _STRCT_H
 #define _STRCT_H
-#include <stddef.h> // added
+#include <stddef.h>
 #include "iolib.h"
 #include "prolib.h"
 #include "strct.h"
