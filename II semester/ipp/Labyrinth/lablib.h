@@ -1,8 +1,8 @@
 #ifndef _LABLIB_H
 #define _LABLIB_H
 
-typedef struct Bitset Bitset; // added
-#include <stddef.h> // added
+typedef struct Bitset Bitset;
+#include <stddef.h>
 #include "strct.h"
 
 // Library contains declaration of functions that searches labyrinth
