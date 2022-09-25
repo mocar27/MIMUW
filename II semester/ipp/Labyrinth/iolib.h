@@ -2,8 +2,8 @@
 #define _IOLIB_H
 #define Uint unsigned int
 
-typedef struct Bitset Bitset; // added
-#include <stddef.h> // added
+typedef struct Bitset Bitset;
+#include <stddef.h>
 #include <stdbool.h>
 #include <limits.h>
 #include "strct.h"
