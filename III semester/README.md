@@ -1,5 +1,5 @@
 ## Third semester
-Tasks and solutions of third semester of my studies will be published after the semester ends.
+Folder contains solutions to assigments I was working on during third semester of CS studies.
 
 **Third semester courses:**
 - Algorithms and data structures
