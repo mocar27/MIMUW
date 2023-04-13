@@ -1,0 +1,58 @@
+Biblioteka standardowa języka C++ udostępnia bardzo przydatne kontenery
+(np. unordered_map i unordered_set), których nie ma w bibliotece C. Często też
+potrzebujemy łączyć kod w C++ z kodem w C.
+
+Napisz w C++ moduł hash udostępniający w języku C tablice haszujące ciągi liczb
+typu uint64_t. Powinien on składać się z pliku nagłówkowego hash.h deklarującego
+interfejs modułu oraz pliku hash.cc zawierającego jego implementację. Moduł ten
+ma udostępniać następujące funkcje:
+
+unsigned long hash_create(hash_function_t hash_function);
+
+        Tworzy tablicę haszującą i zwraca jej identyfikator. Parametr
+        hash_function jest wskaźnikiem na funkcję haszującą, która daje w wyniku
+        liczbę uint64_t i ma kolejno parametry uint64_t const * oraz size_t.
+
+void hash_delete(unsigned long id);
+
+        Usuwa tablicę haszującą o identyfikatorze id, o ile ona istnieje.
+        W przeciwnym przypadku nic nie robi.
+
+size_t hash_size(unsigned long id);
+
+        Daje liczbę ciągów przechowywanych w tablicy haszującej
+        o identyfikatorze id lub 0, jeśli taka tablica nie istnieje.
+
+bool hash_insert(unsigned long id, uint64_t const * seq, size_t size);
+
+        Wstawia do tablicy haszującej o identyfikatorze id ciąg liczb
+        całkowitych seq o długości size. Wynikiem jest informacja, czy operacja
+        się powiodła. Operacja się nie powiedzie, jeśli nie ma takiej tablicy
+        haszującej, jeśli tablica haszująca zawiera już taki ciąg, jeśli
+        parametr seq ma wartość NULL lub parametr size ma wartość 0.
+
+bool hash_remove(unsigned long id, uint64_t const * seq, size_t size);
+
+        Usuwa z tablicy haszującej o identyfikatorze id ciąg liczb całkowitych
+        seq o długości size. Wynikiem jest informacja, czy operacja się
+        powiodła. Operacja się nie powiedzie, jeśli nie ma takiej tablicy
+        haszującej, jeśli tablica haszująca nie zawiera takiego ciągu,
+        jeśli parametr seq ma wartość NULL lub parametr size ma wartość 0.
+
+void hash_clear(unsigned long id)
+
+        Jeśli tablica haszująca o identyfikatorze id istnieje i nie jest pusta,
+        to usuwa z niej wszystkie elementy. W przeciwnym przypadku nic nie robi.
+
+bool hash_test(unsigned long id, uint64_t const * seq, size_t size);
+
+        Daje wynik true, jeśli istnieje tablica haszująca o identyfikatorze id
+        i zawiera ona ciąg liczb całkowitych seq o długości size. Daje wynik
+        false w przeciwnym przypadku oraz gdy parametr seq ma wartość NULL lub
+        parametr size ma wartość 0.
+
+Funkcje powinny wypisywać na standardowy strumień błędów informacje
+diagnostyczne. Poprawność parametrów i wykonania funkcji można sprawdzać za
+pomocą asercji. Kompilowanie z parametrem -DNDEBUG powinno wyłączać wypisywanie
+i asercje. Obsługa standardowego wyjścia diagnostycznego powinna być
+realizowana z użyciem strumienia C++.
