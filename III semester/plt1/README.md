@@ -18,7 +18,7 @@ Collaborators: [@kamart02](https://github.com/kamart02) & [@jta666](https://gith
 Collaborator: [@Scharmi](https://github.com/Scharmi)
 
 ## Task 4 - Organism
-Collaborator: 
+Collaborator: [@Michał Sobczak]
 
 ## Task 5 - KVFifo
 Collaborator: [@WeronikaPiecuch](https://github.com/WeronikaPiecuch)
