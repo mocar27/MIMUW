@@ -1,4 +1,4 @@
-# Databases
+# ***Databases***
 
 As a project for Databases course we have created board game rental system for MIMUW Students' Council.
 
