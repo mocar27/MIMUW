@@ -9,6 +9,7 @@ Every project was made in pair, this was obligatory element of the course to imp
 Full description of every task is available inside each directory (content of the tasks is available only in Polish).
 
 ## Task 1 - TOP7
+Collaborator: [@koxkox111](https://github.com/koxkox111)
 
 ## Task 2 - Hash
 
