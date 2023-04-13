@@ -10,6 +10,7 @@ Full description of every task is available inside each directory (content of th
 
 ## Task 1 - TOP7
 Collaborator: [@koxkox111](https://github.com/koxkox111)
+Basics of C++
 
 ## Task 2 - Hash
 Collaborators: [@kamart02](https://github.com/kamart02) & [@jta666](https://github.com/jta666)
