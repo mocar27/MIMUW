@@ -6,7 +6,7 @@ It was written from scratch, it has been written in Java using Spring Boot for b
 
 and in JavaScript and CSS using React for frontend development.
 
-Project was made in collaboration with @JKuziola
+Project was made in collaboration with [@JKuziola](https://github.com/JKuziola)
 
 ---> Site not yet available :( <---
 
