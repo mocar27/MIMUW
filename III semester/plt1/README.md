@@ -1,4 +1,4 @@
-# Programming languages and tools 1
+# ***Programming languages and tools 1***
 
 This course was based on introducing and improving students' knowledge of various C++ possibilities and functions.
 
