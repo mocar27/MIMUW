@@ -14,5 +14,8 @@ endfunction()
 
 add_library(err err.c)
 
+add_example_pthread_program(primes)
+add_example_pthread_program(producer-consumer)
 add_example_pthread_program(readers-writers-template)
+# add_example_pthread_program(readers-writers)
 

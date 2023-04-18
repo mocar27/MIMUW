@@ -14,4 +14,11 @@ function(add_example_shmem_program target_name)
   target_link_libraries(${target_name} rt)
 endfunction()
 
+add_example_shmem_program(get_memory)
+add_example_shmem_program(send_message)
+add_example_shmem_program(send_message_no_inheritance)
+add_example_shmem_program(unnamed_memory)
+add_example_shmem_program(send_message_protected)
+add_example_shmem_program(unnamed_memory_protected)
+
 add_example_shmem_program(gifts)

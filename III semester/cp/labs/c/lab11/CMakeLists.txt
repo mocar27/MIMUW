@@ -12,4 +12,7 @@ function(add_example_program target_name)
   target_link_libraries(${target_name} err)
 endfunction()
 
+add_example_program(simple_handler)
+add_example_program(signal_mask)
+add_example_program(more_info)
 add_example_program(terminator)
