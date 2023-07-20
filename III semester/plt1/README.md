@@ -26,7 +26,7 @@ Collaborator: [@Scharmi](https://github.com/Scharmi)
 Value semantics, defining types, references, classes, constructors, overloading operators. 
 
 ## Task 4 - Organism
-Collaborator: [@Michał Sobczak](https://github.com/Sobczakus1658)
+Collaborator: [@Sobczakus1658](https://github.com/Sobczakus1658)
 
 Templates (of: classes, functions, methods) and metaprogramming.
 
