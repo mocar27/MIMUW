@@ -43,56 +43,6 @@ int main() {
         dp[it].second = 1;
     }
 
-    // potem iterujemy sie tylko po robotnikach ktorzy sami nie moga pokryc 
-    // calego komitetu na przedziale [0..n], tj. w wektorze maja pary (0,0)
-    // for (int i = it; i <= n;i++) {
-
-    //     // najdalszy pracownik ktorego juz nie moze reprezentowac workers[i]
-    //     int minWorker = i - 1; // workers[i] nie moze juz reprezentowac workers[minWorker],
-    //     int j = i - 1; // pierwszy z lewej ktory juz nie moze byc w komitecie z workers[i]
-
-    //     // checkujemy wszystkich pracownikow ktorzy maja <= .first, 
-    //     // szukamy najmniejszego .first bo minimalny komitet
-    //     // jak znajdzie sie mniejszy niz aktualny to mamy komitet z mniajsza minimalna liczba osob
-
-    //     while (minWorker > 1 && abs(workers[minWorker] - workers[i]) <= k) {// dopoki nie znajdzie pierwszego co nie wchodzi w przeciecie
-    //         minWorker--;
-    //     }
-    //     while (j >= 1 && workers[i] - workers[j] < l) {  // workers[j] to pierwszy robotnik ktory moze byc w komitecie z workers[i]
-    //         j--;
-    //     }
-
-    //     cout << "dla pracownika: " << workers[i] << " pierwszy z ktorym moze byc w komitecie to: " << workers[j] << " pierwszy nie reprezentowany: " << workers[minWorker] << endl;
-    //     int minSize = inf;
-    //     int sum = 0;
-
-
-
-    //     if (dp[j].first != -inf) {
-    //         minSize = dp[j].first;
-    //     }
-
-    //     for (int itr = j; itr >= 1; itr--) {
-
-    //         if (abs(workers[minWorker] - workers[itr]) <= k) {   // jesli znajdziemy na lewo kogos z mniejsza liczba minimalnego komitetu
-    //                     // to zamieniamy min na niego i sumujemy od niego od nowa 
-    //             if (dp[itr].first != 0 && dp[itr].first < minSize) {
-    //                 minSize = dp[itr].first;
-    //                 sum = dp[itr].second % modulo;
-    //             }
-    //             else if (minSize != inf && dp[itr].first == minSize) {
-    //                 sum = (sum + dp[itr].second) % modulo;
-    //             }
-    //         }
-    //     }
-
-    // // czy ten warunek jest dobry i wystarczajacy?
-    //     if (minSize != inf && sum != 0) { // workers[minWorker] != -inf
-    //         dp[i].first = minSize + 1;
-    //         dp[i].second = sum;
-    //     } // else workers[minWorker] == -inf wtedy zapisz minSize i sum
-    // }
-
     long long w = 1;
     long long tail = 1;
     long long j = 1;
@@ -144,8 +94,6 @@ int main() {
             numOfWays = (numOfWays + dp[i].second) % modulo;
         }
     }
-    // for (int i = 0; i <= n;i++) {
-    //     cout << dp[i].first << " " << dp[i].second << endl;
-    // }
+    
     cout << sizeOfCommittee % modulo << " " << numOfWays % modulo;
 }
