@@ -1,0 +1,34 @@
+{% extends "base_html.html" %}
+
+{% block title %}Usuń Plik{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../../static/compiler/css/generic.css">
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <h1>Usuń Plik</h1>
+        {% if form.errors %}
+            <p class="error">Popraw poniższe błędy:</p>
+            <ul class="error">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <li>{{ field|title }}: {{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <label for="file">Wybierz Plik do usunięcia:</label>
+            <select id="file" name="file">
+                {% for file in files %}
+                    <option value="{{ file.id }}">{{ file.name }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Usuń plik">
+        </form>
+    </div>
+{% endblock %}

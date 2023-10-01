@@ -1,0 +1,32 @@
+{% extends "base_html.html" %}
+
+{% block title %}Zaloguj się{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../../static/compiler/css/generic.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Zaloguj się</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button id="redirect" style="float: right; cursor:pointer;">Nie masz konta? Zarejestruj się!</button>
+            <input type="submit" id="submit-btn" value="Zaloguj się">
+        </form>
+    </div>
+
+    {% block scripts %}
+        {% load static %}
+        <script src="{% static 'compiler/js/register.js' %}"></script>
+        <script src="{% static 'compiler/js/plugins.js' %}"></script>
+
+        <script>
+            document.getElementById("redirect").addEventListener("click", function redirectFunction() {
+                window.location.href = "/compiler/register/";
+            });
+        </script>
+    {% endblock %}
+{% endblock %}

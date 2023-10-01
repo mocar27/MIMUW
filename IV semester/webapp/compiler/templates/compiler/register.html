@@ -1,0 +1,38 @@
+{% extends "base_html.html" %}
+
+{% block title %}Zaloguj się{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../../static/compiler/css/generic.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Zarejestruj się</h1>
+
+        <form method="post">
+            {% csrf_token %}
+            <label for="username">Nazwa użytkownika:</label>
+            <input type="text" id="username" name="username" required>
+            <div class="username-invalid-feedback" style="display: none"></div>
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="login" required>
+            <div class="login-invalid-feedback" style="display: none"></div>
+            <label for="password">Hasło:</label>
+            <input type="text" id="password" name="password" required>
+            <button id="redirect" style="float: right; cursor:pointer;">Masz już konto? Zaloguj się!</button>
+            <input type="submit" id="submit-btn" value="Zarejestruj się">
+        </form>
+    </div>
+
+    {% block scripts %}
+        {% load static %}
+        <script src="{% static 'compiler/js/register.js' %}"></script>
+        <script src="{% static 'compiler/js/plugins.js' %}"></script>
+        <script>
+            document.getElementById("redirect").addEventListener("click", function redirectFunction() {
+                window.location.href = "/compiler/loginview/";
+            });
+        </script>
+    {% endblock %}
+{% endblock %}

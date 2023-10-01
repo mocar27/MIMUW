@@ -1,0 +1,33 @@
+{% extends "base_html.html" %}
+
+{% block title %}Usuń Katalog{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../../static/compiler/css/generic.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Usuń Katalog</h1>
+        {% if form.errors %}
+            <p class="error">Popraw poniższe błędy:</p>
+            <ul class="error">
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <li>{{ field|title }}: {{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form method="post">
+            {% csrf_token %}
+            <label for="catalog">Wybierz katalog do usunięcia:</label>
+            <select id="catalog" name="catalog">
+                {% for catalog in catalogs %}
+                    <option value="{{ catalog.id }}">{{ catalog.name }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Usuń Katalog">
+        </form>
+    </div>
+{% endblock %}

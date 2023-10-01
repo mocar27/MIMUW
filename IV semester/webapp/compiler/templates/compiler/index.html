@@ -1,0 +1,174 @@
+<!doctype html>
+<html class="no-js" lang="" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <title>Projekt Aplikacje WWW</title>
+    <meta name="description" content="Kompilator SDCC online">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    {% load static %}
+    <link href="{% static 'compiler/css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'compiler/css/normalize.css' %}" rel="stylesheet">
+
+    <meta name="theme-color" content="#fafafa">
+
+    <style>
+        .save-btn {
+            background-color: var(--borders-color);
+            color: var(--text-color);
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Plik</button>
+            <div class="dropdown-menu">
+                <div class="dropdown-links">
+                    <a href="compiler/adddirectory" class="dropdown-option">Dodaj katalog</a>
+                    <a href="compiler/addfile" class="dropdown-option">Dodaj plik</a>
+                    <a href="compiler/deletedirectory" class="dropdown-option">Usuń katalog</a>
+                    <a href="compiler/deletefile" class="dropdown-option">Usuń plik</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Edycja</button>
+            <div class="dropdown-menu">
+                <div class="dropdown-links">
+                    <button class="dropdown-option" id="compile-button" style="text-align: left">Skompiluj plik</button>
+                    <button class="dropdown-option" id="save-compilation" style="text-align: left">Zapisz wynik
+                        kompilacji
+                    </button>
+                        <button class="dropdown-option" id="save-file" style="text-align: left">Zapisz plik</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Opcje</button>
+            <div class="dropdown-menu">
+                <div class="dropdown-links">
+                    <a href="compiler/logoutview" class="dropdown-option">Wyloguj się</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="theme-switch-wrapper">
+            <button class="theme-switch-btn" id="theme-button"></button>
+        </div>
+    </div>
+
+    <div class="choose-file">
+        <ul class="folder-tree">
+            {% for catalog in catalogs %}
+                {% if catalog.parent_catalog == None %}
+                    {{ catalog.recursetree | safe }}
+                {% endif %}
+            {% endfor %}
+            {% for file in files %}
+                {% if file.catalog == None %}
+                    <li>
+                        <button class="choose-file-btn" data-id="{{ file.id }}">{{ file.name }}</button>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="code">
+        <form method="post">
+            {% csrf_token %}
+            <pre>
+      <label for="file-content"></label>
+        <textarea rows="500" cols="500" class="file-content" id="file-content" name="file-content"></textarea>
+      </pre>
+        </form>
+    </div>
+
+    <div class="code-fragment">
+    <pre>
+      <code class="file-content" id="compilation-result"></code>
+    </pre>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn" onclick="openTab(event, 'STANDARD')" id="defaultOpen">STANDARD</button>
+        <button class="tab-btn" onclick="openTab(event, 'OPTYMALIZACJE')">OPTYMALIZACJE</button>
+        <button class="tab-btn" onclick="openTab(event, 'PROCESOR')">PROCESOR</button>
+        <button class="tab-btn" onclick="openTab(event, 'ZALEŻNE')">ZALEŻNE</button>
+    </div>
+
+    <div id="STANDARD" class="tab-content">
+        <h3>Wybierz standard języka do kompilacji programu:</h3>
+        <label class="container">C89
+            <input type="radio" name="standard" value="--std-c89">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">C99
+            <input type="radio" name="standard" value="--std-c99">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">C11
+            <input type="radio" name="standard" value="--std-c11">
+            <span class="checkmark"></span>
+        </label>
+        <button class="save-btn" id="standard">Zapisz wybór</button>
+    </div>
+
+    <div id="OPTYMALIZACJE" class="tab-content">
+        <h3>Wybierz optymalizacje z jakimi powinien zostać skompilowany program:</h3>
+        <label class="container">--opt-code-speed
+            <input type="checkbox" name="optymalizacje" value="--opt-code-speed">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">--allow-unsafe-read
+            <input type="checkbox" name="optymalizacje" value="--allow-unsafe-read">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">--opt-code-size
+            <input type="checkbox" name="optymalizacje" value="--opt-code-size">
+            <span class="checkmark"></span>
+        </label>
+        <button class="save-btn" id="optymalizacje">Zapisz wybór</button>
+    </div>
+
+    <div id="PROCESOR" class="tab-content">
+        <h3>Wybierz procesor użyty do skompilowania programu:</h3>
+        <label class="container">MCS51
+            <input type="radio" name="procesor" value="-mmcs51">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">Z80
+            <input type="radio" name="procesor" value="-mz80">
+            <span class="checkmark"></span>
+        </label>
+        <label class="container">STM8
+            <input type="radio" name="procesor" value="-mstm8">
+            <span class="checkmark"></span>
+        </label>
+        <button class="save-btn" id="procesor">Zapisz wybór</button>
+    </div>
+
+    <div id="ZALEŻNE" class="tab-content">
+        <h3>Wybierz procesor aby wyświetlić dostępne dla niego opcje.</h3>
+        <button class="save-btn" id="zalezne">Zapisz wybór</button>
+    </div>
+</div>
+
+
+<script src="{% static 'compiler/js/main.js' %}"></script>
+<script src="{% static 'compiler/js/plugins.js' %}"></script>
+
+</body>
+</html>

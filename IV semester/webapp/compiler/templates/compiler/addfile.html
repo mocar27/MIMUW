@@ -1,0 +1,25 @@
+{% extends "base_html.html" %}
+
+{% block title %}Dodaj nowy Plik{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../../static/compiler/css/generic.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Dodaj nowy Plik</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <label for="catalog">Wybierz Katalog dla swojego Pliku:</label>
+            <select id="catalog" name="catalog">
+                <option value="">Brak</option>
+                {% for catalog in catalogs %}
+                    <option value="{{ catalog.id }}">{{ catalog.name }}</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Dodaj Plik">
+        </form>
+    </div>
+{% endblock %}

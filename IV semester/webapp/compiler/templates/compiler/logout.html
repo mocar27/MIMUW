@@ -1,0 +1,27 @@
+{% extends "base_html.html" %}
+
+{% block title %}Wylogowano{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="../../static/compiler/css/generic.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h1>Wylogowano</h1>
+        <h2>Zaloguj się ponownie:</h2>
+        <input type="submit" id="submit-btn" value="Zaloguj się">
+    </div>
+
+    {% block scripts %}
+        {% load static %}
+        <script src="{% static 'compiler/js/register.js' %}"></script>
+        <script src="{% static 'compiler/js/plugins.js' %}"></script>
+
+        <script>
+            document.getElementById("submit-btn").addEventListener("click", function redirectFunction() {
+                window.location.href = "/compiler/loginview/";
+            });
+        </script>
+    {% endblock %}
+{% endblock %}
