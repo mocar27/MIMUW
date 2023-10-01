@@ -15,3 +15,5 @@ The program is fully written in Java using all of the mechanisms to write concur
 - CountDownLatch
 - Theads
 - Mutual exclusion data access
+
+Files other than in the `solution` directory were provided by the author of the task.
