@@ -1,4 +1,4 @@
-## Third semester
+# Third semester
 Folder contains solutions to assigments I was working on during third semester of CS studies.
 
 **Third semester courses:**
