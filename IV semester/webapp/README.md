@@ -2,6 +2,8 @@
 
 Project that we were required to create is **Online SDCC Compiler**.
 
+Project was written from scratch. It is developed in Python using Django and JavaScript, HTML and CSS.
+
 There were four parts of the project and in each part new functionalities were added to the code.
 
 When running, the project allows user to:
