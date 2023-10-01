@@ -1,4 +1,11 @@
-# MIMUW
-Repository contains assigments I was required to do during my studies at University of Warsaw. 
+# Fourth semester
 
-**Only the solutions belong to me, the content of the tasks belongs to their authors.**
+Folder contains solutions to assigments I was working on during fourth semester of CS studies.
+
+**Fourth semester courses:**
+- Computer networks
+- Operating systems
+- Software engineering
+- Web applications
+- Languages and tools for programming II
+- Languages, automata and computations
