@@ -11,7 +11,7 @@ Thread can switch seats inside one workshop, it can do it instatly if the seat i
 Problem of switching threads in cycles is solved has been solved in the implementation of this task. 
 
 The program is fully written in Java using all of the mechanisms to write concurrent programs:
-- Semaphores;
-- CountDownLatch;
-- Theads;
-- Mutual exclusion data access;
+- Semaphores
+- CountDownLatch
+- Theads
+- Mutual exclusion data access
