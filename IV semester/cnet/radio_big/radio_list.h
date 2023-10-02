@@ -197,7 +197,7 @@ radio_station* update_lookup_time(radio_station** first, char* host, uint16_t da
 // Removes all inactive stations except the one that is currently playing.
 // Returns true if the station is still active, false otherwise.
 bool remove_inactive_stations(radio_station** first, radio_station* station, pthread_mutex_t* radio_mut, atomic_bool* show) {
-    // PO KAZDORAZOWYM USUNIECU STACJI WYSWIETL UI, CZYLI CONSTRUCT USER INTERFACE
+
     radio_station* temp = *first;
     bool res = true;
 
