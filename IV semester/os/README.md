@@ -1,6 +1,6 @@
 # ***Operating systems***
 
-The course was intended to show how to work and program at a very low level. There were overall five tasks that each made a contribution to the final grade.
+The course was intended to show how to work and develop at a very low level. There were overall five tasks that each made a contribution to the final grade.
 
 ## **Inverse permutation (Task 1 - NASM Assembly)**
 
