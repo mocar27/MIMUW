@@ -13,7 +13,7 @@ The function's arguments are a pointer **p** to a non-empty array of integers an
 The goal of the task was to implement a distributed stack machine simulator in x86_64 assembly language. 
 The machine consists of **N** cores that are numbered from 0 to N − 1, where **N** is some constant set during the compilation of simulator.
 
-The task was about to implement function **uint64_t core(uint64_t n, char const *p)** in assembly language that is later going to be called from C level programs.
+The task was about to implement function *uint64_t core(uint64_t n, char const *p)** in assembly language that is later going to be called from C level programs.
 
 The **n** parameter contains the core number. The **p** parameter is a pointer to the ASCIIZ string and defines the calculation to be performed by the core. 
 A computation consists of operations performed on the stack.
