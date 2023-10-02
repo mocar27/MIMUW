@@ -1,4 +1,4 @@
-# Radio big - Task 1
+# Radio big - Task 2
 
 The task of implementing an Internet radio was divided into two independent parts - implementing a transmitter and implementing a receiver.
 
