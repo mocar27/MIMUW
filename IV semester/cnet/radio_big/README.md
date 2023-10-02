@@ -37,19 +37,19 @@ If there are several connections, they all display the same thing and changes in
 The displayed station list updates when new stations are detected or unavailable ones are dropped. 
 It looks exactly like this:
 
-------------------------------------------------------------------------
+'------------------------------------------------------------------------'
 
  SIK Radio
 
-------------------------------------------------------------------------
+'------------------------------------------------------------------------'
 
 PR1
 
 Radio "357"
 
- > Radio "Disco Pruszkow"
+' > 'Radio "Disco Pruszkow"
 
-------------------------------------------------------------------------
+'------------------------------------------------------------------------'
 
 ## Audio data transfer protocol
 
