@@ -2,11 +2,15 @@
 
 ## Radio (Small - Task 1)
 
-The program creates different stations and different workshops inside which on given entry data threads can operate and switch between each stations (only in the workshop they are in).
+The task was to write an Internet radio transmitter and receiver. This functionalities of radio are going to be later modified and extended in the task 2 of the **Computer networks** course.
+
+Initially transmitter and receiver were communicating with each other using UDP protocol sent to given port and destination address. Connection was one to one.
 
 ## Radio (Big - Task 2)
 
-The program runs tasks given in entry data, it can run programs, write data to output or error, kill the executor of the tasks. Programs run by the executor, as the others instructions are done concurrently. 
+The goal of the task was to extend the functionality of the transmitter and receiver written in the previous task.
+
+The exact extension was that this time the transmitter is able to transmit to many receivers at once, there can also be many receivers, i.e. "radio station listeners".
 
 ## Labs
 
