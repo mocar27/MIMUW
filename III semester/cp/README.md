@@ -1,4 +1,4 @@
-# ***Concurrent Programming***
+# ***Concurrent Programming ❤***
 
 ## Workshop (Java)
 
