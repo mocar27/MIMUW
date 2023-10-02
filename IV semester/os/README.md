@@ -4,7 +4,7 @@ The course was intended to show how to work and develop at a very low level. The
 
 ## **Inverse permutation (Task 1 - NASM Assembly)**
 
-The task was about to implement function **bool inverse_permutation(size_t n, int *p)** in assembly language that is later going to be called from C level programs.
+The task was about to implement function *bool inverse_permutation(size_t n, int *p)** in assembly language that is later going to be called from C level programs.
 
 The function's arguments are a pointer **p** to a non-empty array of integers and the size of that array **n**. If the array pointed to by **p** contains a permutation of numbers between 0 and n-1, the function reverses that permutation in place and the function returns **true**. Otherwise, the result of the function is **false**, and the contents of the array pointed to by **p** after the function finishes are the same as when it was called.
 
