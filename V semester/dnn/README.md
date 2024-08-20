@@ -10,6 +10,7 @@ Each task was designed to cover different part of machine learning:
 - Reinforcement Learning (RL)
 
 I have added additional solutions to tasks that were designed for the final exam of the course.
+
 The exam tasks covered additional Vision and NLP tasks.
 
 Full projects, descriptions and solutions can be found [here](https://github.com/mocar27/dnn-overall).
