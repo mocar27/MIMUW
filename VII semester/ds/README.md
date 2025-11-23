@@ -3,6 +3,7 @@
 Distributed systems course included two big assignments and small assignments handed out during labs of each class.
 
 I've inluded my solutions to small assignments in the `labs/` directory.
+
 More detailed descriptions, as well as, solutions and implementations of big assignments can be found 
 using the links below.
 
