@@ -2,7 +2,7 @@
 
 Advanced network programming course included one enormous assignment throught the whole classes.
 
-Students were delegated with implementing type of Torrent-service (P2P) with enabling of sharing files
+Students were delegated with implementing type of Torrent-service (distributed P2P) with enabling of sharing files
 with each other connected peer. Additionally to P2P communication, there was central server communication
 for verification, handshake and introduction to the service purposes. 
 
