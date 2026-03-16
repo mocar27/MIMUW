@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+package worker;
+option go_package = "github.com/JacquesWhite/MapReduce/proto/worker";
+
+service Worker {
+  rpc Map(MapRequest) returns (MapResponse);
+  rpc Reduce(ReduceRequest) returns (ReduceResponse);
+  rpc CheckStatus(CheckStatusRequest) returns (CheckStatusResponse);
+}
+
+message MapRequest {
+  string input_file = 1;
+  string intermediate_dir = 2;
+  int32 num_partitions = 3;
+  int32 task_id = 4;
+  string plugin_path = 5;
+}
+
+message MapResponse {
+  int32 task_id = 1;
+  repeated string intermediate_files = 2;
+}
+
+message ReduceRequest {
+  int32 task_id = 1;
+  repeated string intermediate_files = 2;
+  string output_file = 3;
+  string plugin_path = 4;
+}
+
+message ReduceResponse {
+  int32 task_id = 1;
+}
+
+message CheckStatusRequest {
+}
+
+message CheckStatusResponse {
+  enum Status {
+    IDLE = 0; // Worker is ready to accept new tasks
+    BUSY = 1; // Worker is currently processing a task
+    COMPLETED = 2; // Worker has completed the task, waiting for the master to collect the output
+  }
+  Status status = 1;
+}
