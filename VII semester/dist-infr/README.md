@@ -6,4 +6,4 @@ Our team was responsible for working on [MapReduce](https://en.wikipedia.org/wik
 
 Project was made in collaboration with [@maclick](https://github.com/maclick), [@zortenburger](https://github.com/zortenburger) and [@JacquesWhite](https://github.com/JacquesWhite).
 
-Project is public on GitHub and can be found [here](https://github.com/JacquesWhite/MapReduce).
+Project is public on GitHub and can be found [here](https://github.com/JacquesWhite/MapReduce), but in case it's not available or the repository is somehow private, I've included the project in the `project/` directory as well.
