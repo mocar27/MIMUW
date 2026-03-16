@@ -10,4 +10,4 @@ Project was later deployed in Heroku, but currently it is not on.
 
 Project was made in a team of four, in collaboration with [@JKuziola](https://github.com/JKuziola), [@wojsza05](https://github.com/wojsza05), [@koxkox111](https://github.com/koxkox111). 
 
-Source code and more detailed description can be found [here](https://github.com/JKuziola/IO-AllegroTracker).
+Source code and more detailed description can be found [here](https://github.com/JKuziola/IO-AllegroTracker), but in case it's not available or the repository is somehow private, I've included the project in the `project/` directory as well..
